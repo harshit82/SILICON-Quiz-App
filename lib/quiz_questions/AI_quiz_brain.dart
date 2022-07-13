@@ -1,8 +1,8 @@
 import 'package:silicon_quiz/quiz_questions/questions.dart';
 
 class AiQuizBrain {
-  int _questionNumber = 0;
-  final List<Questions> _questionBank = [
+  int questionNumber = 0;
+  final List<Questions> questionBank = [
     Questions(
         question: "Artificial Intelligence is about_____.",
         option1: "Playing a game on Computer",
@@ -121,32 +121,30 @@ class AiQuizBrain {
   ];
 
   int getNumberOfQuestions() {
-    return _questionBank.length;
+    return questionBank.length;
   }
 
   String getQuestionText() {
-    return _questionBank[_questionNumber].question;
+    return questionBank[questionNumber].question;
   }
 
   String getAnswer() {
-    return _questionBank[_questionNumber].answer;
+    return questionBank[questionNumber].answer;
   }
 
   bool isFinished() {
-    if (_questionNumber >= _questionBank.length - 1) {
+    if (questionNumber >= questionBank.length - 1) {
       return true;
     } else {
       return false;
     }
   }
 
-  void nextQuestion() {
-    if (_questionNumber < _questionBank.length - 1) {
-      _questionNumber++;
-    }
+  getQuestionBank(){
+    return questionBank;
   }
 
   void reset() {
-    _questionNumber = 0;
+    questionNumber = 0;
   }
 }

@@ -3,23 +3,21 @@ import 'package:silicon_quiz/home.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'SILICON Quiz',
       theme: ThemeData.dark().copyWith(backgroundColor: Colors.black),
       home: SplashScreenView(
         navigateRoute: const Home(),
-        duration: 3000,
+        duration: 4000,
         imageSize: 300,
         imageSrc: "splash_screen.jpeg",
         text: "Silicon Quiz",
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
         textStyle: const TextStyle(
           fontSize: 30.0,
         ),
-        backgroundColor: Colors.black87,
+        backgroundColor: const Color(0xFF01212e),
       ),
     );
   }

@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                         top: 0,
                         left: 0,
                         child: Padding(
-                          padding: const EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(20.0),
                           child: Row(
                             children: [
                               GlowText(
@@ -61,15 +61,15 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: const GlowIcon(
-                                  Icons.edit,
-                                  color: Colors.blueAccent,
-                                  size: 20,
-                                  blurRadius: 9,
-                                ),
-                              ),
+                              // IconButton(
+                              //   onPressed: () {},
+                              //   icon: const GlowIcon(
+                              //     Icons.edit,
+                              //     color: Colors.blueAccent,
+                              //     size: 20,
+                              //     blurRadius: 9,
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),
@@ -90,8 +90,12 @@ class Home extends StatelessWidget {
                                         3.5,
                                     color: Colors.blue[300],
                                     child: Stack(
+                                      fit: StackFit.expand,
                                       children: [
-                                        Image.asset("AI_background.jpeg"),
+                                        Image.asset(
+                                          "AI_background.jpeg",
+                                          fit: BoxFit.fitHeight,
+                                        ),
                                         Center(
                                           child: GlowText(
                                             "Artificial Intelligence",
@@ -128,8 +132,12 @@ class Home extends StatelessWidget {
                                         3.5,
                                     color: Colors.blue[200],
                                     child: Stack(
+                                      fit: StackFit.expand,
                                       children: [
-                                        Image.asset("DS_background.jpeg"),
+                                        Image.asset(
+                                          "DS_background.jpeg",
+                                          fit: BoxFit.fitHeight,
+                                        ),
                                         Center(
                                           child: GlowText(
                                             "Data Science",
